@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "722175013674",
+    "project_id": "bookapp-d16de",
+    "storage_bucket": "bookapp-d16de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722175013674:android:8b30d816fa814198352453",
+        "android_client_info": {
+          "package_name": "huyndph30375.fpoly.bookapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB-ycC_2qiphYDGzaH5EPM-HYom3D_eIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

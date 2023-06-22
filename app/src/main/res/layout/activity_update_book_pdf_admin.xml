@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".view.AddCategoryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/background_toolbar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/update_book"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/avatar"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="225dp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                tools:ignore="ObsoleteLayoutParam">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/titleBookTill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/inputTitleBook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_input"
+                        android:drawableStart="@drawable/ic_book"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:hint="@string/book_title"
+                        android:inputType="text"
+                        android:padding="@dimen/_12sdp"
+                        android:textSize="@dimen/_14sdp"
+                        tools:ignore="Autofill" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/desBookTill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleBookTill"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/inputDesBook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_input"
+                        android:drawableStart="@drawable/ic_book"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:hint="@string/book_description"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:padding="@dimen/_12sdp"
+                        android:textSize="@dimen/_14sdp"
+                        tools:ignore="Autofill" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/categorySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desBookTill"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/background_input"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:padding="@dimen/_12sdp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    android:hint="@string/pick_category"
+                    app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    app:drawableStartCompat="@drawable/ic_category" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/priceBookTill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/categorySpinner"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/inputPriceBook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_input"
+                        android:drawableStart="@drawable/ic_price"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:hint="@string/price"
+                        android:inputType="number"
+                        android:padding="@dimen/_12sdp"
+                        android:textSize="@dimen/_14sdp"
+                        tools:ignore="Autofill" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/countBookTill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/priceBookTill"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/inputCountBook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_input"
+                        android:drawableStart="@drawable/ic_numbers_24"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:hint="@string/quantity"
+                        android:inputType="number"
+                        android:padding="@dimen/_12sdp"
+                        android:textSize="@dimen/_14sdp"
+                        tools:ignore="Autofill" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <Button
+                    android:id="@+id/submitNewBook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/countBookTill"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/background_button01"
+                    android:text="@string/submit"
+                    android:textAllCaps="false" />
+
+                <ImageButton
+                    android:id="@+id/backPress"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/submitNewBook"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/background_fab"
+                    android:src="@drawable/ic_back"
+                    tools:ignore="ContentDescription" />
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+</ScrollView>

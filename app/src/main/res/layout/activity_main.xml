@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".view.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/background_toolbar">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/avatar" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout1">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_marginStart="@dimen/_30sdp"
+           android:layout_marginEnd="@dimen/_30sdp">
+
+           <TextView
+               android:id="@+id/tvWelcome"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/welcome"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:layout_centerHorizontal="true"
+               android:textSize="@dimen/_18sdp"/>
+
+
+       </RelativeLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_button01"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_above="@id/nextToNoAccount"
+        android:text="Sign In Now"/>
+
+    <Button
+        android:id="@+id/nextToNoAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:text="@string/continue_without_account"
+        android:textColor="@color/primary"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_button02"/>
+
+</RelativeLayout>
